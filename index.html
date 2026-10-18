@@ -1,1 +1,207 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ĶLUS — sākumlapa</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #526170;
+    }
+
+    .forma {
+      display: flex;
+      width: 100%;
+      max-width: 1000px;
+      min-height: 710px;
+      margin: 0 auto;
+      border: 2px solid #e2e2e2;
+    }
+
+    .kreisais {
+      width: 42%;
+      padding: 70px 30px 40px;
+      text-align: center;
+      color: white;
+      background: linear-gradient(#008cff, #00c2e8);
+    }
+
+    .kreisais h1 {
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.3;
+      margin: 20px 0 25px;
+    }
+
+    .svitra {
+      width: 170px;
+      height: 1px;
+      margin: 0 auto 30px;
+      background: #a4ddff;
+    }
+
+    .kreisais p {
+      font-size: 16px;
+    }
+
+    .ilustracija {
+      width: 100%;
+      max-width: 300px;
+      margin-top: 60px;
+    }
+
+    .labais {
+      position: relative;
+      width: 58%;
+      padding: 72px 55px;
+    }
+
+    .labais h2 {
+      margin: 20px 0 25px;
+      color: #008cff;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .labais p {
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+
+    .pogas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .poga {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid #008cff;
+      color: white;
+      background: #008cff;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .poga-gaisa {
+      color: #008cff;
+      background: white;
+    }
+
+    .kluda {
+      position: absolute;
+      right: 55px;
+      bottom: 32px;
+      padding: 7px 16px;
+      border: none;
+      color: white;
+      background: #ff8275;
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      .forma {
+        flex-direction: column;
+      }
+
+      .kreisais,
+      .labais {
+        width: 100%;
+        padding: 35px 25px;
+      }
+
+      .ilustracija {
+        max-width: 200px;
+        margin-top: 20px;
+      }
+
+      .labais {
+        min-height: 400px;
+      }
+
+      .labais h2 {
+        font-size: 30px;
+      }
+
+      .kluda {
+        right: 25px;
+        bottom: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="forma">
+    <section class="kreisais">
+      <h1>Esi sveicināts<br>ĶLUS</h1>
+      <div class="svitra"></div>
+      <p>Tavas laboratorijas uzskaites sistēma</p>
+
+      <svg class="ilustracija"
+           viewBox="0 0 300 280"
+           role="img"
+           aria-label="Laboratorijas kolba un mēģene">
+        <circle cx="150" cy="140" r="115" fill="#e5f5ff"/>
+        <circle cx="75" cy="65" r="6" fill="#9ad6ff"/>
+        <circle cx="159" cy="35" r="6" fill="#9ad6ff"/>
+        <circle cx="178" cy="24" r="4" fill="#9ad6ff"/>
+
+        <path d="M125 65 H175 V130
+                 C230 165 223 245 150 245
+                 C77 245 70 165 125 130 Z"
+              fill="#9bbcff"/>
+        <rect x="116" y="56" width="68" height="17"
+              fill="#a4c4ff"/>
+        <path d="M102 183
+                 C127 175 148 199 174 184
+                 C185 178 196 178 202 180
+                 C213 218 183 236 150 236
+                 C118 236 96 216 102 183 Z"
+              fill="#008cff"/>
+        <circle cx="148" cy="154" r="7" fill="#68a8ff"/>
+        <circle cx="154" cy="128" r="4" fill="#68a8ff"/>
+        <circle cx="143" cy="104" r="4" fill="#68a8ff"/>
+
+        <path d="M45 112 H77 V225
+                 C77 249 45 249 45 225 Z"
+              fill="#9bbcff"/>
+        <path d="M52 147 H70 V225
+                 C70 237 52 237 52 225 Z"
+              fill="#008cff"/>
+        <rect x="38" y="105" width="46" height="14"
+              fill="#b4cdff"/>
+        <circle cx="60" cy="135" r="3" fill="#008cff"/>
+      </svg>
+    </section>
+
+    <section class="labais">
+      <h2>Ko Tu vēlies darīt šodien?</h2>
+
+      <p>
+        Piekļūsti savas skolas laboratorijai vai aplūko
+        publiski pieejamo informāciju un datus par laboratoriju.
+      </p>
+
+      <nav class="pogas">
+        <a class="poga" href="forma2.html">Pieslēgties</a>
+        <a class="poga poga-gaisa" href="forma3.html">
+          Piekļūt publiskiem datiem
+        </a>
+      </nav>
+
+      <button class="kluda" type="button">Ziņot par kļūdu</button>
+    </section>
+  </main>
+</body>
+</html>
