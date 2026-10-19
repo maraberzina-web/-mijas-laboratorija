@@ -261,5 +261,134 @@
       </div>
     </section>
   </main>
+  <script>
+  let inventars = [];
+  let vielas = [];
+  let atlase = "visi";
+
+  const tabula = document.querySelector("tbody");
+  const mekletajs = document.querySelector('input[type="search"]');
+  const pogas = document.querySelectorAll(".filtrs");
+
+  mekletajs.placeholder = "Meklēt pēc nosaukuma";
+
+  pogas[0].onclick = function () {
+    mainitAtlasi("visi", 0);
+  };
+
+  pogas[1].onclick = function () {
+    mainitAtlasi("vielas", 1);
+  };
+
+  pogas[2].textContent = "Rādīt inventāru";
+  pogas[2].onclick = function () {
+    mainitAtlasi("inventars", 2);
+  };
+
+  function mainitAtlasi(veids, pogasNumurs) {
+    atlase = veids;
+
+    for (let i = 0; i < pogas.length; i++) {
+      pogas[i].classList.remove("aktivs");
+    }
+
+    pogas[pogasNumurs].classList.add("aktivs");
+    paraditDatus();
+  }
+
+  function paraditDatus() {
+    tabula.textContent = "";
+
+    let dati = [];
+
+    if (atlase === "visi" || atlase === "inventars") {
+      dati = dati.concat(inventars);
+    }
+
+    if (atlase === "visi" || atlase === "vielas") {
+      dati = dati.concat(vielas);
+    }
+
+    const teksts = mekletajs.value.trim().toLowerCase();
+    let atrasti = 0;
+
+    for (let i = 0; i < dati.length; i++) {
+      const ieraksts = dati[i];
+
+      if (!ieraksts.nosaukums.toLowerCase().includes(teksts)) {
+        continue;
+      }
+
+      const rinda = document.createElement("tr");
+
+      let daudzums = "";
+
+      if (ieraksts.daudzums !== undefined) {
+        daudzums = ieraksts.daudzums + " " + ieraksts.mervienibas;
+      }
+
+      const vertibas = [
+        ieraksts.id,
+        ieraksts.nosaukums,
+        ieraksts.tips,
+        ieraksts.apakstips,
+        ieraksts.skaits,
+        daudzums,
+        ieraksts.komentari
+      ];
+
+      for (let j = 0; j < vertibas.length; j++) {
+        const suna = document.createElement("td");
+        suna.textContent = vertibas[j];
+        rinda.appendChild(suna);
+      }
+
+      tabula.appendChild(rinda);
+      atrasti++;
+    }
+
+    if (atrasti === 0) {
+      paraditPazinojumu("Nav atrasts neviens ieraksts.");
+    }
+  }
+
+  function paraditPazinojumu(teksts) {
+    tabula.textContent = "";
+
+    const rinda = document.createElement("tr");
+    const suna = document.createElement("td");
+
+    suna.colSpan = 7;
+    suna.textContent = teksts;
+    rinda.appendChild(suna);
+    tabula.appendChild(rinda);
+  }
+
+  async function ieladetDatus() {
+    paraditPazinojumu("Dati tiek ielādēti...");
+
+    try {
+      const inventaraAtbilde = await fetch("inventars.json");
+      const vieluAtbilde = await fetch("vielas.json");
+
+      if (!inventaraAtbilde.ok || !vieluAtbilde.ok) {
+        throw new Error("Neizdevās ielādēt failus.");
+      }
+
+      inventars = await inventaraAtbilde.json();
+      vielas = await vieluAtbilde.json();
+
+      paraditDatus();
+    } catch (kluda) {
+      paraditPazinojumu(
+        "Neizdevās ielādēt datus. Pārbaudi, vai abi JSON faili ir pievienoti."
+      );
+    }
+  }
+
+  mekletajs.addEventListener("input", paraditDatus);
+
+  ieladetDatus();
+</script>
 </body>
 </html>
