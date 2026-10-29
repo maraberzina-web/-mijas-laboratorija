@@ -22,3 +22,27 @@ un inventāru, meklēt pēc nosaukuma un atlasīt ierakstus.
 - Atsevišķi parādīt vielas vai inventāru.
 - Ielādēt datus no JSON failiem.
 - Parādīt paziņojumu, ja nekas nav atrasts.
+## Izstrādes metode
+
+Izvēlējos iteratīvo izstrādes metodi. Tas nozīmē, ka
+programmu veidoju pa daļām un pēc katras daļas pārbaudu,
+vai tā darbojas. Šī metode ir piemērota, jo kļūdas var
+pamanīt un izlabot pakāpeniski.
+
+## Darba plāns
+
+1. Noteikt problēmu un programmas mērķi.
+2. Noskaidrot lietotāju vajadzības.
+3. Izveidot sākumlapas un datu tabulas izskatu.
+4. Pievienot vielu un inventāra datus JSON failos.
+5. Izveidot datu ielādi, meklēšanu un filtrus.
+6. Pārbaudīt programmu un izlabot atrastās kļūdas.
+7. Sagatavot lietošanas instrukciju.
+
+## Izmantotās tehnoloģijas
+
+- HTML — lapu saturs un uzbūve.
+- CSS — krāsas, izkārtojums un pielāgošana ekrāna izmēram.
+- JavaScript — datu ielāde, meklēšana un filtrēšana.
+- JSON — vielu un inventāra datu glabāšana.
+- GitHub — projekta failu un izmaiņu glabāšana.
