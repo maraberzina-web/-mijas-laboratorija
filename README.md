@@ -46,3 +46,20 @@ pamanīt un izlabot pakāpeniski.
 - JavaScript — datu ielāde, meklēšana un filtrēšana.
 - JSON — vielu un inventāra datu glabāšana.
 - GitHub — projekta failu un izmaiņu glabāšana.
+## Lietošanas instrukcija
+
+1. Atver projekta mājaslapu.
+2. Sākumlapā nospied “Piekļūt publiskiem datiem”.
+3. Tabulā apskati vielu un inventāra sarakstu.
+4. Meklēšanas laukā ieraksti vajadzīgo nosaukumu vai tā daļu.
+5. Nospied “Rādīt vielas”, lai apskatītu tikai vielas.
+6. Nospied “Rādīt inventāru”, lai apskatītu tikai inventāru.
+7. Lai atkal redzētu visus ierakstus, iztīri meklēšanas
+   lauku un nospied “Rādīt visu”.
+8. Lai atgrieztos sākumlapā, nospied
+   “Atpakaļ uz sākumlapu”.
+
+## Autore
+
+Vārds, uzvārds: [Māra Bērziņa]
+Klase: 11.
