@@ -63,3 +63,14 @@ pamanīt un izlabot pakāpeniski.
 
 Vārds, uzvārds: [Māra Bērziņa]
 Klase: 11.
+## Testēšana
+
+Pārbaudīju mājaslapas darbību.
+
+| Pārbaude | Rezultāts |
+| --- | --- |
+| Atvērt publisko datubāzi | Vielu un inventāra tabula parādās. |
+| Meklēšanā ierakstīt “svari” | Parādās divi svaru ieraksti. |
+| Izvēlēties “Rādīt vielas” | Tabulā redzamas tikai vielas. |
+| Izvēlēties “Rādīt inventāru” | Tabulā redzami pieci inventāra ieraksti. |
+| Meklēšanā ierakstīt “zzzz” | Parādās paziņojums, ka neviens ieraksts nav atrasts. |
