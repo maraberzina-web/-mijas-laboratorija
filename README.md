@@ -1,4 +1,4 @@
-# -mijas-laboratorija
+# Ķīmijas laboratorija
 ## Projekta ideja
 
 Ķīmijas laboratorijas uzskaites sistēma paredzēta skolas
